@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://app.miwifi.com/js/router_request.js"></script>
+  <title>WOL网络唤醒</title>
+</head>
+<body>
+  <h1>WOL网络唤醒</h1>
+  <table>
+    <tr>
+      <td>操作</td>
+      <td>
+        <input type="button" value="授权" id="authorizeButton">
+        <input type="button" value="启动" id="runButton">
+      </td>
+  </table>
+</body>
+<script type="text/javascript">
+var appId = "2882111111111111111";
+$(document).ready(function() {
+  $("#authorizeButton").click(function(){
+    if (!routerRequest.hasAccessToken()) {
+      routerRequest.authorize(window.location.href, appId);
+    }
+  });
+
+  $("#runButton").click(function() {
+    routerRequest.request({
+      path: "/api-third-party/service/datacenter/plugin_control",
+      type: "GET",
+      data: {
+        // deviceId: deviceId, // 这个参数只是调试时添加，上线后要去掉。
+        info: "00:11:22:33:44:55:192.168.31.150",
+        appId: appId,
+      },
+      success: function(data) {
+        alert("启动成功:" + data);
+      },
+      error: function(data) {
+        console.log("error:", data);
+        alert("启动失败");
+      }
+    });
+  });
+});
+</script>
+</html>

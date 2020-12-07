@@ -1,0 +1,60 @@
+#请输入插件ID。
+plugin_id= "2882111111111111111";
+
+#请输入插件名称。
+name= "WOL网络唤醒";
+
+#请输入插件介绍。
+introduction= "远程网络唤醒（WOL）电脑，通过路由器内网一键唤醒！安全高效！";
+
+#请输入插件简介。
+summary= "Wake On LAN";
+
+#已安装插件图标URL。
+installed_icon= "http://file.market.xiaomi.com/download/AppStore/06db3355c248a44a5356900551ee69fbc630bef2c";
+
+#插件详情图标URL。
+detail_image= "http://file.market.xiaomi.com/download/AppStore/0558a15b9496c48943800b2a8bbea55a9af6c6362";
+
+#可安装插件图标URL。
+market_icon="http://file.market.xiaomi.com/download/AppStore/0913374924dca4c0223beccf7a422cde6de98f33e";
+
+#开发者名称。
+developer= "kkhaike";
+
+#请输入插件版本号(格式：xx.xx.xx)。
+version= "1.0.0";
+
+#请输入插件控制页面url。
+control_url= "http://1.2.3.4/index.html";
+
+#请输入打包目录(如果插件没有可执行文件，可不用填写)。
+zip_path= "./build";
+
+#请输入开发者证书文件路径。
+pem_path= "./key/client.pem";
+
+#请输入私钥文件路径。
+key_path= "./key/client.key";
+
+#请输入sdk level。
+sdk_level= "5";
+
+#是否支持R1D
+supported_rom= "miwifi_rom_2";
+
+#是否需要访问公共存储目录
+access_userdata= "true";
+
+#是否需要支持"下载"功能，此项为true才能够使用下载相关的sdk
+support_download= "false";
+
+#是否需要支持"vpn操作"，此项为true才能够使用vpn相关的sdk
+support_vpn_operation= "false";
+
+#是否需要支持"已连接的设备信息"，此项为true才能够使用链接设备信息相关的sdk
+support_connected_device_info= "false"
+
+#是否需要支持"访问U盘"，此项为true才能够使用访问U盘相关的sdk
+support_usb_disk_mount= "false"
+
