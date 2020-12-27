@@ -1,6 +1,6 @@
 # 小米路由器 WOL 插件
 
-介于之前 misstar 提供的原生插件停止维护了无法使用，思索着自己弄一个唤醒家里的 NAS 
+介于之前 misstar 提供的原生插件停止维护了无法使用，思索着自己弄一个唤醒家里的 NAS
 
 搞了一天多才搞好一个这么简单的插件，终于知道小米路由器生态为啥这么差了，从软到硬都很渣，不是看到刷其他固件不稳定早放弃了
 
@@ -15,7 +15,8 @@
 1. 去 http://www1.miwifi.com/miwifi_open.html 左下方下载 插件开发文档，里面包含 开发文档 和 linux 交叉编译 sdk，找个 64 的 linux 系统解压
 2. 将本目录放在解压后的 sdk_package 目录中，可为 sdk_package/wol
 3. 进入 wol 目录，用 make wol 构建二进制程序 build/wol
-4. 将 wol程序 和 start_script启动脚本 打一个压缩包 pac.zip
+4. 用 ../toolchain/bin/mipsel-xiaomi-linux-uclibc-g++ sleep.cpp -o sleep 构建 sleep
+5. 将 wol程序、sleep程序、start_script启动脚本 和 wol_daemon.sh 打一个压缩包 pac.zip
 
 ### 平台创建
 1. 参照 之前解压的 开发文档 或者这个地址 https://dev.mi.com/docs/routerplugin/user_guide/
